@@ -99,12 +99,7 @@ class _ExtendedSelectableFragment extends _SelectableFragment {
   bool get _deleteAll => specialInlineSpanBase?.deleteAll ?? false;
 
   List<Rect> get boundingBoxes {
-    final List<Rect> result = <Rect>[];
-    final List<TextBox> boxes = paragraph.getBoxesForRange(range);
-    for (final TextBox box in boxes) {
-      result.add(box.toRect());
-    }
-    return result;
+    return paragraph.boundingBoxes;
   }
   
   @override
