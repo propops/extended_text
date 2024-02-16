@@ -1139,7 +1139,7 @@ class _SelectableFragment
   LayerLink? _endHandleLayerLink;
 
   List<Rect> get boundingBoxes {
-    return paragraph.boundingBoxes;
+    return [];
   }
   
   @override
