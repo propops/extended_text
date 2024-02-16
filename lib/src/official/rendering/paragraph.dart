@@ -1139,12 +1139,7 @@ class _SelectableFragment
   LayerLink? _endHandleLayerLink;
 
   List<Rect> get boundingBoxes {
-    final List<Rect> result = <Rect>[];
-    final List<TextBox> boxes = paragraph.getBoxesForRange(range);
-    for (final TextBox box in boxes) {
-      result.add(box.toRect());
-    }
-    return result;
+    return paragraph.boundingBoxes;
   }
   
   @override
