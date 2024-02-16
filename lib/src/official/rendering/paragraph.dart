@@ -65,6 +65,15 @@ class _RenderParagraph extends RenderBox
 
   List<InlineSpanSemanticsInformation>? _cachedCombinedSemanticsInfos;
 
+  List<Rect> get boundingBoxes {
+    final List<Rect> result = <Rect>[];
+    final List<TextBox> boxes = paragraph.getBoxesForRange(range);
+    for (final TextBox box in boxes) {
+      result.add(box.toRect());
+    }
+    return result;
+  }
+  
   /// The text to display.
   InlineSpan get text => _textPainter.text!;
   set text(InlineSpan value) {
