@@ -99,7 +99,7 @@ class _ExtendedSelectableFragment extends _SelectableFragment {
   bool get _deleteAll => specialInlineSpanBase?.deleteAll ?? false;
 
   List<Rect> get boundingBoxes {
-    return paragraph.boundingBoxes;
+    return [];
   }
   
   @override
